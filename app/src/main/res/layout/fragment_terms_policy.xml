@@ -11,7 +11,7 @@
             android:paddingBottom="@dimen/nineteen_dp">
         <TextView
                 android:id="@+id/text_conditions"
-                android:text="@string/terms_text_test"
+                android:text="@string/terms_intro_body"
                 android:layout_width="0dp"
                 android:textSize="@dimen/terms_text_body"
                 android:layout_marginTop="@dimen/fifty_dp"
@@ -35,7 +35,7 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 android:layout_marginTop="@dimen/margin_twelve"
                 app:layout_constraintTop_toBottomOf="@+id/text_conditions"/>
-
+<!--
         <TextView
                 android:id="@+id/terms_title"
                 android:text="@string/terms_title_string"
@@ -64,6 +64,7 @@
                 android:layout_marginTop="@dimen/margin_twelve"
                 app:layout_constraintTop_toBottomOf="@+id/terms_title"
                 android:visibility="gone"/>
+                -->
         <TextView
                 android:id="@+id/policy_title"
                 android:text="@string/policy_title_string"
@@ -77,7 +78,8 @@
                 app:layout_constraintStart_toEndOf="@+id/guideline4"
                 app:layout_constraintHorizontal_bias="0.0"
                 android:layout_marginTop="@dimen/margin_twelve"
-                app:layout_constraintTop_toBottomOf="@+id/terms_text"/>
+                app:layout_constraintTop_toBottomOf="@+id/text_agreement"/>
+
         <TextView
                 android:id="@+id/policy_text"
                 android:text="@string/policy_text"
@@ -92,6 +94,7 @@
                 style="@style/TextBodyStyle"
                 android:visibility="gone"
                 app:layout_constraintTop_toBottomOf="@+id/policy_title"/>
+        <!--
         <TextView
                 android:id="@+id/cookies_title"
                 android:text="@string/cookies_title_string"
@@ -120,7 +123,7 @@
                 style="@style/TextBodyStyle"
                 app:layout_constraintTop_toBottomOf="@+id/cookies_title"
                 android:visibility="gone"/>
-
+-->
         <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline"
                 android:layout_width="wrap_content"
@@ -152,7 +155,7 @@
                 android:layout_marginRight="@dimen/margin_eight"
                 android:clickable="true"
                 android:layout_marginTop="@dimen/margin_twenty"
-                app:layout_constraintTop_toBottomOf="@+id/cookies_text"
+                app:layout_constraintTop_toBottomOf="@+id/text_agreement"
                 app:layout_constraintHorizontal_bias="0.843" android:focusable="true"/>
 
         <Button

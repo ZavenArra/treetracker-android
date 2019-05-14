@@ -49,6 +49,7 @@ class TermsPolicyFragment: Fragment() {
         //Make parts of the text_agreement to be clickable
         val spannableString = SpannableString(getString(R.string.agreement_text_test))
 
+        /*
         val clickableTermsCond = object : ClickableSpan(){
             override fun onClick(widget: View) {
                 if(view.terms_text.visibility == View.VISIBLE){
@@ -91,16 +92,19 @@ class TermsPolicyFragment: Fragment() {
             }
         }
 
+
         spannableString.setSpan(clickableTermsCond, 32,48,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
         spannableString.setSpan(clickablePolicy, 53,67,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
         spannableString.setSpan(clickableCookies, 79,90,Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+        */
+
         text_agreement.text = spannableString
         text_agreement.movementMethod = LinkMovementMethod.getInstance()
 
         show_details_text.setOnClickListener {
-            terms_text?.visibility = View.VISIBLE
+//            terms_text?.visibility = View.VISIBLE
             policy_text?.visibility = View.VISIBLE
-            cookies_text?.visibility = View.VISIBLE
+ //           cookies_text?.visibility = View.VISIBLE
         }
 
         vm.onNavigateToMap = {
