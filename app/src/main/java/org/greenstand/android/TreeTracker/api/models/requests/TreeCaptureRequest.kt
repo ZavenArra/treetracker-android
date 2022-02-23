@@ -1,6 +1,21 @@
 package org.greenstand.android.TreeTracker.api.models.requests
 
+import com.google.gson.JsonParser
+import com.google.gson.TypeAdapter
+import com.google.gson.annotations.JsonAdapter
 import com.google.gson.annotations.SerializedName
+import com.google.gson.stream.JsonReader
+import com.google.gson.stream.JsonWriter
+
+
+class RawJsonAdapter: TypeAdapter<String>() {
+    override fun write(out: JsonWriter?, value: String?) {
+        out?.jsonValue(value)
+    }
+    override fun read(reader: JsonReader?): String {
+        return JsonParser().parse(reader).toString()
+    }
+}
 
 class TreeCaptureRequest(
     @SerializedName("session_id")
@@ -24,5 +39,6 @@ class TreeCaptureRequest(
     @SerializedName("rotation_matrix")
     val rotationMatrix: String?,
     @SerializedName("extra_attributes")
-    val extraData: String,
+    @JsonAdapter(RawJsonAdapter::class)
+    val extraAttributes: String,
 )
